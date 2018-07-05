@@ -341,7 +341,7 @@ https://stud.hosted.hr.nl/0884930/GarbageGame/ De game van Marleen
 ### Extra opdrachten 
 
 - [ ] De game ziet er zeer verzorgd uit dankzij goed uitgewerkt UI design en artwork.
-- [] De game bevat een hiscore lijst. Scores worden bewaard nadat de game is afgesloten.
+- [ ] De game bevat een hiscore lijst. Scores worden bewaard nadat de game is afgesloten.
 - [ ] De game werkt met Canvas in plaats van DOM elementen
 - [x] De game bevat local of online multiplayer.
 - [ ] De game werkt op mobiele schermen en ondersteunt touchscreen controls.
