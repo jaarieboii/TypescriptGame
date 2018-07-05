@@ -313,7 +313,7 @@ class StartScreen {
 # Klassendiagram
 
 
-https://github.com/jaarieboii/TypescriptGame/tree/master/docs/images/klassendiagram.jpeg
+![umlgame-master](https://github.com/jaarieboii/TypescriptGame/tree/master/docs/images/klassendiagram.jpeg)
 
 
 
@@ -350,4 +350,4 @@ https://stud.hosted.hr.nl/0884930/GarbageGame/ De game van Marleen
 
 
 ## Mijn Feedback
-De game zit Goed in elkaar en heeft multiplayer erin zitten. Wat ik interessant vind van de game is dat je samen voor de volle punten moet gaan. Dit is in een bepaalde moeilijkheidsgraad die om de paar vuilnisstukken  iets sneller gaat.
+De game zit Goed in elkaar en heeft multiplayer erin zitten. Wat ik interessant vind van de game is dat je samen voor de volle punten moet gaan. Dit is in een bepaalde moeilijkheidsgraad die om de paar vuilnisstukken iets sneller gaat.
