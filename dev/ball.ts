@@ -6,7 +6,7 @@ class Ball extends GameObject {
     
     public speedX: number
     public speedY: number
-    private div: HTMLElement
+    
     
     
     constructor(x:number,y:number) {

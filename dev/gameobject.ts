@@ -2,6 +2,7 @@ class GameObject {
 
     protected x : number
     protected y : number
+    protected div:HTMLElement
     
 
     constructor(x: number, y:number) {
@@ -12,8 +13,8 @@ class GameObject {
     protected update() : void{
 
     }
-        // protected getRectangle(){
-        //     return this.div.getBoundingClientRect()
-        // }
+    protected getRectangle(){
+         return this.div.getBoundingClientRect()
+    }
 
 }

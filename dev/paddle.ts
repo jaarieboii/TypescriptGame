@@ -1,8 +1,8 @@
-// <reference path="gameobject.ts"/>
+/// <reference path="gameobject.ts"/>
 
-class Paddle {
+class Paddle extends GameObject {
     
-    private div:HTMLElement
+    
     
     private downkey : number
     private upkey   : number
@@ -10,18 +10,17 @@ class Paddle {
     private downSpeed   : number = 0
     private upSpeed     : number = 0
     
-    private x : number
-    private y : number
     
-    constructor(xp:number, up:number, down:number) {
+    constructor(y:number, up:number, down:number, x:number) {
+        super(x,y)
         this.div = document.createElement("paddle")
         document.body.appendChild(this.div)
         
         this.upkey   = up
         this.downkey = down
         
-        this.x      = window.innerWidth / 2 - 50
-        this.y      = xp
+        this.x      = x
+        this.y      = y
         
         window.addEventListener("keydown", (e: KeyboardEvent) => this.onKeyDown(e))
         window.addEventListener("keyup", (e: KeyboardEvent) => this.onKeyUp(e))

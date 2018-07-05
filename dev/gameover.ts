@@ -4,7 +4,6 @@ class GameOver {
 
     private div: HTMLElement
     private game: Game
-    private score:number[]
     private highScore: HTMLElement
 
     constructor(g: Game, score:number , highScore:number[]) {

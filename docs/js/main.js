@@ -16,6 +16,9 @@ var GameObject = (function () {
     }
     GameObject.prototype.update = function () {
     };
+    GameObject.prototype.getRectangle = function () {
+        return this.div.getBoundingClientRect();
+    };
     return GameObject;
 }());
 var Ball = (function (_super) {
@@ -104,7 +107,7 @@ var PlayScreen = (function () {
         this.game = g;
         this.endScore = this.game.highScore;
         this.score = new Score(0);
-        this.paddle = new Paddle(600, 37, 39);
+        this.paddle = new Paddle(600, 37, 39, window.innerWidth / 2 - 50);
         this.div = document.createElement("Score");
         document.body.appendChild(this.div);
         for (var j = 0; j < 200; j += 25) {
@@ -215,19 +218,21 @@ var GameOver = (function () {
     };
     return GameOver;
 }());
-var Paddle = (function () {
-    function Paddle(xp, up, down) {
-        var _this = this;
-        this.downSpeed = 0;
-        this.upSpeed = 0;
-        this.div = document.createElement("paddle");
-        document.body.appendChild(this.div);
-        this.upkey = up;
-        this.downkey = down;
-        this.x = window.innerWidth / 2 - 50;
-        this.y = xp;
+var Paddle = (function (_super) {
+    __extends(Paddle, _super);
+    function Paddle(y, up, down, x) {
+        var _this = _super.call(this, x, y) || this;
+        _this.downSpeed = 0;
+        _this.upSpeed = 0;
+        _this.div = document.createElement("paddle");
+        document.body.appendChild(_this.div);
+        _this.upkey = up;
+        _this.downkey = down;
+        _this.x = x;
+        _this.y = y;
         window.addEventListener("keydown", function (e) { return _this.onKeyDown(e); });
         window.addEventListener("keyup", function (e) { return _this.onKeyUp(e); });
+        return _this;
     }
     Paddle.prototype.getRectangle = function () {
         return this.div.getBoundingClientRect();
@@ -259,7 +264,7 @@ var Paddle = (function () {
         this.div.style.transform = "translate(" + this.x + "px, " + this.y + "px)";
     };
     return Paddle;
-}());
+}(GameObject));
 var Score = (function () {
     function Score(score) {
         this.div = document.createElement("score");

@@ -1,4 +1,3 @@
-// <reference path="screen.ts"/>
 /// <reference path="ball.ts"/>
 
 class PlayScreen {
@@ -17,7 +16,7 @@ class PlayScreen {
         this.game = g
         this.endScore = this.game.highScore
         this.score = new Score(0)
-        this.paddle = new Paddle(600, 37, 39)
+        this.paddle = new Paddle(600, 37, 39, window.innerWidth / 2 - 50)
         this.div = document.createElement("Score")
         document.body.appendChild(this.div)
         
