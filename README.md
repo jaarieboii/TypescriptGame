@@ -1,4 +1,4 @@
-# CMTTHE04 Week5 oefening 1
+# Typescript Game
 
 ## Pong met Inheritance
 
