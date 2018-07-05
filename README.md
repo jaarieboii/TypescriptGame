@@ -1,5 +1,5 @@
 # CMTTHE01-4-Game
-Link voor een demo
+Link voor een demo.
 - 
 
 # Checklist
