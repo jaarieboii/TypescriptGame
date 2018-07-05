@@ -313,7 +313,7 @@ class StartScreen {
 # Klassendiagram
 
 
-![umlgame-master](https://github.com/jaarieboii/TypescriptGame/tree/master/docs/images/klassendiagram.jpeg)
+![klassendiagram](https://github.com/jaarieboii/TypescriptGame/tree/master/docs/images/klassendiagram.jpeg)
 
 
 
