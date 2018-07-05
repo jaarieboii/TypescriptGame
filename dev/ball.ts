@@ -1,23 +1,21 @@
-// <reference path="gameobject.ts"/>
+/// <reference path="gameobject.ts"/>
 
-class Ball {
+class Ball extends GameObject {
     
-    private div : HTMLElement
     
-    private x : number
-    private y: number
     
     public speedX: number
     public speedY: number
-    //private game:Game
+    private div: HTMLElement
     
     
-    constructor() {
+    constructor(x:number,y:number) {
+        super(x,y)
         this.div = document.createElement("ball")
         document.body.appendChild(this.div)
         
-        this.x = window.innerWidth / 2 
-        this.y = window.innerHeight - 250
+        this.x = x 
+        this.y = y
 
         this.speedY = -3 - (Math.random() * 6)
         this.speedX = Math.random() * 6 - 3
@@ -30,21 +28,20 @@ class Ball {
     public hitPaddle(){
         this.speedY *= -1
     }
+    public hitBrick(){
+        this.speedY *= -1
+    }
     
 
     public update() : void {
         this.x += this.speedX
         this.y += this.speedY
         
-        // if( this.y > window.innerHeight) { 
-        //     this.game.endScreen()
-        // }
+        
         if( this.y + this.getRectangle().height > window.innerHeight || this.y < 0) { 
             this.speedY *= -1
         }
-        // if( this.y + this.getRectangle().height > (window.innerHeight -60) || this.y < 40) { 
-        //     this.speedY *= -1
-        // }
+        
         if (this.x + this.getRectangle().width > window.innerWidth || this.x < 0 ) {
             this.speedX *= -1
         } 

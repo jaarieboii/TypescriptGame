@@ -49,3 +49,6 @@ brick {
     border: 1px;
     width: 75px; height: 25px;
 }
+ ul{
+     position: initial;
+ }

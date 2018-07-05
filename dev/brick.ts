@@ -25,10 +25,4 @@ class Brick {
         this.div.remove()
     }
 
-    public hitBrick(){
-        if(this.row + this.getRectangle().left == 0 || this.row + this.getRectangle().right == 150){
-            this.ball.speedY *= 1
-        }
-    }
-
 }
